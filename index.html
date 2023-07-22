@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <title>NodeJS</title>
+    <title>Upload Form</title>
   </head>
   <body>
-    <h1>Test</h1>
-    <h2>Test</h2>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <p>Pilih File</p>
+      <input type="file" name="userFile" /><br /><br />
+      <input type="submit" value="Upload" name="btnSubmit" />
+    </form>
   </body>
 </html>
