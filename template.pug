@@ -1,16 +1,48 @@
 doctype html
 html(lang="en")
   head
-    title= pageTitle
-    script(type='text/javascript').
-      if (foo) bar(1 + 5);
-  body
-    h1 Pug - node template engine
-    #container.col
-      if youAreUsingPug
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features.
+    title Demo Pug 
+    style
+      include style.css
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+  body 
+    h2 Hello Pug 
+    p Halaman ini berasal dari template yang dibuat menggunakan pug 
+    p #{nama}
+    p semester: 
+    ul 
+      each elemen in semester 
+        li= elemen
+
+  table(border="1")
+    tr 
+      th No 
+      th Nama
+      th Nilai
+    tr
+      td 1 
+      td Budi 
+      td 80
+    tr
+      td 2 
+      td Andi 
+      td 90
+    tr
+      td 3 
+      td Caca 
+      td 75
+
+  br
+  
+  form(action="/register" method="POST")
+    div 
+      label(for="nama") Nama :
+      input(type="text" name="nama" id="nama" placeholder="Nama Lengkap")
+    div
+      label(for="email") Email :
+      input(type="email" name="email" id="email" placeholder="Email")
+    div
+      label(for="password") Password :
+      input(type="password" name="password" id="password" placeholder="Password")
+    div
+      input(type="submit" value="Register")
